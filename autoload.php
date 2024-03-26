@@ -218,7 +218,7 @@
         'App\Asic\AttributedURI' => __DIR__ .'/AttributedURI.php',
         'App\Asic\TimestampType' => __DIR__ .'/TimestampType.php',
         'App\Asic\cancelRequestType' => __DIR__ .'/cancelRequestType.php',
-        'App\Asic\cancelReplyType' => __DIR__ .'/cancelReplyType.php'
+        'App\Asic\cancelReplyType' => __DIR__ .'/cancelReplyType.php',
         'App\Asic\changeAddressRequestType' => __DIR__ .'/changeAddressRequestType.php',
         'App\Asic\changeAddressReplyType' => __DIR__ .'/changeAddressReplyType.php'
     );
