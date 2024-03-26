@@ -1,13 +1,14 @@
 <?php
 
 
- function autoload_2601db981a9d4e15cd8984489f2bd873($class)
+ function autoload_3bcc2bc6474fd41eb3394601dbcd27b2($class)
 {
     $classes = array(
         'App\Asic\ExternalBnCancelTransferService' => __DIR__ .'/ExternalBnCancelTransferService.php',
         'App\Asic\ExternalBnChangeAddressService' => __DIR__ .'/ExternalBnChangeAddressService.php',
         'App\Asic\ExternalBnRenewalService' => __DIR__ .'/ExternalBnRenewalService.php',
         'App\Asic\ExternalBz1Service' => __DIR__ .'/ExternalBz1Service.php',
+        'App\Asic\ExternalGetNniServiceV3' => __DIR__ .'/ExternalGetNniServiceV3.php',
         'App\Asic\telephoneNumberType' => __DIR__ .'/telephoneNumberType.php',
         'App\Asic\telephoneNumber' => __DIR__ .'/telephoneNumber.php',
         'App\Asic\addressType' => __DIR__ .'/addressType.php',
@@ -215,6 +216,32 @@
         'App\Asic\messageTimestampType' => __DIR__ .'/messageTimestampType.php',
         'App\Asic\messageEventsType' => __DIR__ .'/messageEventsType.php',
         'App\Asic\genericResultType' => __DIR__ .'/genericResultType.php',
+        'App\Asic\nniTypeType' => __DIR__ .'/nniTypeType.php',
+        'App\Asic\numberHeadingType' => __DIR__ .'/numberHeadingType.php',
+        'App\Asic\searchStatusType' => __DIR__ .'/searchStatusType.php',
+        'App\Asic\restrictedNniTypeCodeType' => __DIR__ .'/restrictedNniTypeCodeType.php',
+        'App\Asic\nniTypeCodeType' => __DIR__ .'/nniTypeCodeType.php',
+        'App\Asic\nameIndexAcncEntityType' => __DIR__ .'/nameIndexAcncEntityType.php',
+        'App\Asic\nameIndexEntityType' => __DIR__ .'/nameIndexEntityType.php',
+        'App\Asic\baseNniEntityType' => __DIR__ .'/baseNniEntityType.php',
+        'App\Asic\formerName' => __DIR__ .'/formerName.php',
+        'App\Asic\nniEntityType' => __DIR__ .'/nniEntityType.php',
+        'App\Asic\nniEntityWithAgentType' => __DIR__ .'/nniEntityWithAgentType.php',
+        'App\Asic\officeholderRole' => __DIR__ .'/officeholderRole.php',
+        'App\Asic\businessType' => __DIR__ .'/businessType.php',
+        'App\Asic\companyType' => __DIR__ .'/companyType.php',
+        'App\Asic\officeholders' => __DIR__ .'/officeholders.php',
+        'App\Asic\shareholders' => __DIR__ .'/shareholders.php',
+        'App\Asic\officeholderType' => __DIR__ .'/officeholderType.php',
+        'App\Asic\shareholderType' => __DIR__ .'/shareholderType.php',
+        'App\Asic\outboundAgentType' => __DIR__ .'/outboundAgentType.php',
+        'App\Asic\searchNniRequestType' => __DIR__ .'/searchNniRequestType.php',
+        'App\Asic\queryNniNameType' => __DIR__ .'/queryNniNameType.php',
+        'App\Asic\proprietor' => __DIR__ .'/proprietor.php',
+        'App\Asic\classType' => __DIR__ .'/classType.php',
+        'App\Asic\companyExtractRequestType' => __DIR__ .'/companyExtractRequestType.php',
+        'App\Asic\company' => __DIR__ .'/company.php',
+        'App\Asic\document' => __DIR__ .'/document.php',
         'App\Asic\tTimestampFault' => __DIR__ .'/tTimestampFault.php',
         'App\Asic\AttributedDateTime' => __DIR__ .'/AttributedDateTime.php',
         'App\Asic\AttributedURI' => __DIR__ .'/AttributedURI.php',
@@ -227,14 +254,18 @@
         'App\Asic\renewalReplyType' => __DIR__ .'/renewalReplyType.php',
         'App\Asic\bz1RequestType' => __DIR__ .'/bz1RequestType.php',
         'App\Asic\bz1ReplyType' => __DIR__ .'/bz1ReplyType.php',
-        'App\Asic\bz1ReplyDataType' => __DIR__ .'/bz1ReplyDataType.php'
+        'App\Asic\bz1ReplyDataType' => __DIR__ .'/bz1ReplyDataType.php',
+        'App\Asic\getNniRequestType' => __DIR__ .'/getNniRequestType.php',
+        'App\Asic\getNniReplyType' => __DIR__ .'/getNniReplyType.php',
+        'App\Asic\requestDataType' => __DIR__ .'/requestDataType.php',
+        'App\Asic\replyDataType' => __DIR__ .'/replyDataType.php'
     );
     if (!empty($classes[$class])) {
         include $classes[$class];
     };
 }
 
-spl_autoload_register('autoload_2601db981a9d4e15cd8984489f2bd873');
+spl_autoload_register('autoload_3bcc2bc6474fd41eb3394601dbcd27b2');
 
 // Do nothing. The rest is just leftovers from the code generation.
 {

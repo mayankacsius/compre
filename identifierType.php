@@ -17,6 +17,7 @@ class identifierType
 
     /**
      * @var issuingPartyCodeType $issuingPartyCode
+
      */
     protected $issuingPartyCode = null;
 
@@ -41,10 +42,24 @@ class identifierType
     protected $deleteIndicator = null;
 
     /**
+     * @var numberHeadingType $numberHeading
+     */
+    protected $numberHeading = null;
+
+    /**
+     * @var nniNumberType $number
+     */
+    protected $number = null;
+
+    /**
+     * @param numberHeadingType $numberHeading
+     * @param nniNumberType $number
      * @param identifierValueType $identifierValue
      */
-    public function __construct($identifierValue)
+    public function __construct($numberHeading = null, $number = null, $identifierValue = null)
     {
+      $this->numberHeading = $numberHeading;
+      $this->number = $number;
       $this->identifierValue = $identifierValue;
     }
 
@@ -171,6 +186,42 @@ class identifierType
     public function setDeleteIndicator($deleteIndicator)
     {
       $this->deleteIndicator = $deleteIndicator;
+      return $this;
+    }
+
+    /**
+     * @return numberHeadingType
+     */
+    public function getNumberHeading()
+    {
+      return $this->numberHeading;
+    }
+
+    /**
+     * @param numberHeadingType $numberHeading
+     * @return \App\Asic\identifierType
+     */
+    public function setNumberHeading($numberHeading)
+    {
+      $this->numberHeading = $numberHeading;
+      return $this;
+    }
+
+    /**
+     * @return nniNumberType
+     */
+    public function getNumber()
+    {
+      return $this->number;
+    }
+
+    /**
+     * @param nniNumberType $number
+     * @return \App\Asic\identifierType
+     */
+    public function setNumber($number)
+    {
+      $this->number = $number;
       return $this;
     }
 
