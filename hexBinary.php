@@ -11,13 +11,13 @@ class hexBinary
     protected $_ = null;
 
     /**
-     * @var anonymous315 $contentType
+     * @var anonymous507 $contentType
      */
     protected $contentType = null;
 
     /**
      * @param string $_
-     * @param anonymous315 $contentType
+     * @param anonymous507 $contentType
      */
     public function __construct($_, $contentType)
     {
@@ -44,7 +44,7 @@ class hexBinary
     }
 
     /**
-     * @return anonymous315
+     * @return anonymous507
      */
     public function getContentType()
     {
@@ -52,7 +52,7 @@ class hexBinary
     }
 
     /**
-     * @param anonymous315 $contentType
+     * @param anonymous507 $contentType
      * @return \App\Asic\hexBinary
      */
     public function setContentType($contentType)

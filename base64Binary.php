@@ -11,13 +11,13 @@ class base64Binary
     protected $_ = null;
 
     /**
-     * @var anonymous315 $contentType
+     * @var anonymous507 $contentType
      */
     protected $contentType = null;
 
     /**
      * @param base64Binary $_
-     * @param anonymous315 $contentType
+     * @param anonymous507 $contentType
      */
     public function __construct($_, $contentType)
     {
@@ -44,7 +44,7 @@ class base64Binary
     }
 
     /**
-     * @return anonymous315
+     * @return anonymous507
      */
     public function getContentType()
     {
@@ -52,7 +52,7 @@ class base64Binary
     }
 
     /**
-     * @param anonymous315 $contentType
+     * @param anonymous507 $contentType
      * @return \App\Asic\base64Binary
      */
     public function setContentType($contentType)
