@@ -1,10 +1,11 @@
 <?php
 
 
- function autoload_7989bab0f238620e4b359cbb9d13ad44($class)
+ function autoload_f34606071b8195baa03d3dc73d5d0a61($class)
 {
     $classes = array(
         'App\Asic\ExternalBnCancelTransferService' => __DIR__ .'/ExternalBnCancelTransferService.php',
+        'App\Asic\ExternalBnChangeAddressService' => __DIR__ .'/ExternalBnChangeAddressService.php',
         'App\Asic\telephoneNumberType' => __DIR__ .'/telephoneNumberType.php',
         'App\Asic\telephoneNumber' => __DIR__ .'/telephoneNumber.php',
         'App\Asic\addressType' => __DIR__ .'/addressType.php',
@@ -218,13 +219,15 @@
         'App\Asic\TimestampType' => __DIR__ .'/TimestampType.php',
         'App\Asic\cancelRequestType' => __DIR__ .'/cancelRequestType.php',
         'App\Asic\cancelReplyType' => __DIR__ .'/cancelReplyType.php'
+        'App\Asic\changeAddressRequestType' => __DIR__ .'/changeAddressRequestType.php',
+        'App\Asic\changeAddressReplyType' => __DIR__ .'/changeAddressReplyType.php'
     );
     if (!empty($classes[$class])) {
         include $classes[$class];
     };
 }
 
-spl_autoload_register('autoload_7989bab0f238620e4b359cbb9d13ad44');
+spl_autoload_register('autoload_f34606071b8195baa03d3dc73d5d0a61');
 
 // Do nothing. The rest is just leftovers from the code generation.
 {
