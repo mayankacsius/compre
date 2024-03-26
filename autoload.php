@@ -1,11 +1,12 @@
 <?php
 
 
- function autoload_f34606071b8195baa03d3dc73d5d0a61($class)
+ function autoload_986c461fc71e3030ab11f43639bc2aba($class)
 {
     $classes = array(
         'App\Asic\ExternalBnCancelTransferService' => __DIR__ .'/ExternalBnCancelTransferService.php',
         'App\Asic\ExternalBnChangeAddressService' => __DIR__ .'/ExternalBnChangeAddressService.php',
+        'App\Asic\ExternalBnRenewalService' => __DIR__ .'/ExternalBnRenewalService.php',
         'App\Asic\telephoneNumberType' => __DIR__ .'/telephoneNumberType.php',
         'App\Asic\telephoneNumber' => __DIR__ .'/telephoneNumber.php',
         'App\Asic\addressType' => __DIR__ .'/addressType.php',
@@ -220,14 +221,16 @@
         'App\Asic\cancelRequestType' => __DIR__ .'/cancelRequestType.php',
         'App\Asic\cancelReplyType' => __DIR__ .'/cancelReplyType.php',
         'App\Asic\changeAddressRequestType' => __DIR__ .'/changeAddressRequestType.php',
-        'App\Asic\changeAddressReplyType' => __DIR__ .'/changeAddressReplyType.php'
+        'App\Asic\changeAddressReplyType' => __DIR__ .'/changeAddressReplyType.php',
+        'App\Asic\renewalRequestType' => __DIR__ .'/renewalRequestType.php',
+        'App\Asic\renewalReplyType' => __DIR__ .'/renewalReplyType.php'
     );
     if (!empty($classes[$class])) {
         include $classes[$class];
     };
 }
 
-spl_autoload_register('autoload_f34606071b8195baa03d3dc73d5d0a61');
+spl_autoload_register('autoload_986c461fc71e3030ab11f43639bc2aba');
 
 // Do nothing. The rest is just leftovers from the code generation.
 {
