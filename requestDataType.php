@@ -4,7 +4,6 @@ namespace App\Asic;
 
 class requestDataType
 {
-
     /**
      * @var abnType $abn
      */
@@ -31,17 +30,25 @@ class requestDataType
     protected $document = null;
 
     /**
+     * @var addressLodgeType $address
+     */
+    protected $address = null;
+
+    
+    /**
      * @param abnType $abn
      * @param nniNumberType $nniNumber
      * @param previousStateTerritoryType $previousStateTerritory
      * @param bnReferenceNumberType $bnReferenceNumber
+     * @param addressLodgeType $address
      */
-    public function __construct($abn, $nniNumber, $previousStateTerritory, $bnReferenceNumber)
+    public function __construct($abn = null, $nniNumber = null, $previousStateTerritory, $bnReferenceNumber, $address)
     {
       $this->abn = $abn;
       $this->nniNumber = $nniNumber;
       $this->previousStateTerritory = $previousStateTerritory;
       $this->bnReferenceNumber = $bnReferenceNumber;
+      $this->address = $address;
     }
 
     /**
@@ -131,6 +138,24 @@ class requestDataType
     public function setDocument($document)
     {
       $this->document = $document;
+      return $this;
+    }
+
+    /**
+     * @return addressLodgeType
+     */
+    public function getAddress()
+    {
+      return $this->address;
+    }
+
+    /**
+     * @param addressLodgeType $address
+     * @return \App\Asic\requestDataType
+     */
+    public function setAddress($address)
+    {
+      $this->address = $address;
       return $this;
     }
 

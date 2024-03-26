@@ -1,7 +1,7 @@
 <?php
 
 
- function autoload_3bcc2bc6474fd41eb3394601dbcd27b2($class)
+ function autoload_d1ce94e26d3845092d68f16907a9c6af($class)
 {
     $classes = array(
         'App\Asic\ExternalBnCancelTransferService' => __DIR__ .'/ExternalBnCancelTransferService.php',
@@ -9,6 +9,7 @@
         'App\Asic\ExternalBnRenewalService' => __DIR__ .'/ExternalBnRenewalService.php',
         'App\Asic\ExternalBz1Service' => __DIR__ .'/ExternalBz1Service.php',
         'App\Asic\ExternalGetNniServiceV3' => __DIR__ .'/ExternalGetNniServiceV3.php',
+        'App\Asic\ExternalQueryAddressService' => __DIR__ .'/ExternalQueryAddressService.php',
         'App\Asic\telephoneNumberType' => __DIR__ .'/telephoneNumberType.php',
         'App\Asic\telephoneNumber' => __DIR__ .'/telephoneNumber.php',
         'App\Asic\addressType' => __DIR__ .'/addressType.php',
@@ -257,6 +258,8 @@
         'App\Asic\bz1ReplyDataType' => __DIR__ .'/bz1ReplyDataType.php',
         'App\Asic\getNniRequestType' => __DIR__ .'/getNniRequestType.php',
         'App\Asic\getNniReplyType' => __DIR__ .'/getNniReplyType.php',
+        'App\Asic\queryAddressRequestType' => __DIR__ .'/queryAddressRequestType.php',
+        'App\Asic\queryAddressReplyType' => __DIR__ .'/queryAddressReplyType.php',
         'App\Asic\requestDataType' => __DIR__ .'/requestDataType.php',
         'App\Asic\replyDataType' => __DIR__ .'/replyDataType.php'
     );
@@ -265,7 +268,7 @@
     };
 }
 
-spl_autoload_register('autoload_3bcc2bc6474fd41eb3394601dbcd27b2');
+spl_autoload_register('autoload_d1ce94e26d3845092d68f16907a9c6af');
 
 // Do nothing. The rest is just leftovers from the code generation.
 {
