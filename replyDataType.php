@@ -16,13 +16,20 @@ class replyDataType
     protected $valid = null;
 
     /**
+     * @var nameIndexAcncEntityType[] $organisation
+     */
+    protected $organisation = null;
+
+    /**
      * @param boolean $valid
      * @param nameIndexAcncEntityType[] $nniEntity
+     * @param nameIndexAcncEntityType[] $organisation
      */
-    public function __construct($valid = null, array $nniEntity = null)
+    public function __construct($valid = null, array $nniEntity = null, array $organisation = null)
     {
       $this->valid = $valid;
       $this->nniEntity = $nniEntity;
+      $this->organisation = $organisation;
     }
 
     /**
@@ -58,6 +65,24 @@ class replyDataType
     public function setValid($valid)
     {
       $this->valid = $valid;
+      return $this;
+    }
+
+    /**
+     * @return nameIndexAcncEntityType[]
+     */
+    public function getOrganisation()
+    {
+      return $this->organisation;
+    }
+
+    /**
+     * @param nameIndexAcncEntityType[] $organisation
+     * @return \App\Asic\replyDataType
+     */
+    public function setOrganisation(array $organisation)
+    {
+      $this->organisation = $organisation;
       return $this;
     }
 
