@@ -1,7 +1,7 @@
 <?php
 
 
- function autoload_3bcc2bc6474fd41eb3394601dbcd27b2($class)
+ function autoload_974deda61c159ec09e25f5da8c607c9d($class)
 {
     $classes = array(
         'App\Asic\ExternalBnCancelTransferService' => __DIR__ .'/ExternalBnCancelTransferService.php',
@@ -14,6 +14,7 @@
         'App\Asic\ExternalSearchNniNameServiceV3' => __DIR__ .'/ExternalSearchNniNameServiceV3.php',
         'App\Asic\ExternalCompanyLodgementService' => __DIR__ .'/ExternalCompanyLodgementService.php',
         'App\Asic\ExternalBz1ServiceV2' => __DIR__ .'/ExternalBz1ServiceV2.php',
+        'App\Asic\ExternalGetTransactionStatusService' => __DIR__ .'/ExternalGetTransactionStatusService.php',
         'App\Asic\telephoneNumberType' => __DIR__ .'/telephoneNumberType.php',
         'App\Asic\telephoneNumber' => __DIR__ .'/telephoneNumber.php',
         'App\Asic\addressType' => __DIR__ .'/addressType.php',
@@ -326,14 +327,26 @@
         'App\Asic\CompanyLodgeRequestType' => __DIR__ .'/CompanyLodgeRequestType.php',
         'App\Asic\CompanyLodgeReplyType' => __DIR__ .'/CompanyLodgeReplyType.php',
         'App\Asic\CompanyLodgeReplyDataType' => __DIR__ .'/CompanyLodgeReplyDataType.php',
-        'App\Asic\accepted' => __DIR__ .'/accepted.php'
+        'App\Asic\accepted' => __DIR__ .'/accepted.php',
+        'App\Asic\transactionStatusRequestType' => __DIR__ .'/transactionStatusRequestType.php',
+        'App\Asic\businessDocumentBody' => __DIR__ .'/businessDocumentBody.php',
+        'App\Asic\transactionStatusReplyType' => __DIR__ .'/transactionStatusReplyType.php',
+        'App\Asic\transactionStatusReplyDataType' => __DIR__ .'/transactionStatusReplyDataType.php',
+        'App\Asic\lodgements' => __DIR__ .'/lodgements.php',
+        'App\Asic\registrations' => __DIR__ .'/registrations.php',
+        'App\Asic\companyIncorporation' => __DIR__ .'/companyIncorporation.php',
+        'App\Asic\statusReason' => __DIR__ .'/statusReason.php',
+        'App\Asic\businessRegistration' => __DIR__ .'/businessRegistration.php',
+        'App\Asic\reservation' => __DIR__ .'/reservation.php',
+        'App\Asic\reservationExtension' => __DIR__ .'/reservationExtension.php',
+        'App\Asic\feePayment' => __DIR__ .'/feePayment.php'
     );
     if (!empty($classes[$class])) {
         include $classes[$class];
     };
 }
 
-spl_autoload_register('autoload_3bcc2bc6474fd41eb3394601dbcd27b2');
+spl_autoload_register('autoload_974deda61c159ec09e25f5da8c607c9d');
 
 // Do nothing. The rest is just leftovers from the code generation.
 {

@@ -22,10 +22,14 @@ class feeType
 
     /**
      * @param feeType $feeType
+     * @param feeSubType $feeSubType
+     * @param feeDescription $feeDescription
      */
-    public function __construct($feeType)
+    public function __construct($feeType, $feeSubType, $feeDescription)
     {
       $this->feeType = $feeType;
+      $this->feeSubType = $feeSubType;
+      $this->feeDescription = $feeDescription;
     }
 
     /**
