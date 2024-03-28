@@ -1,7 +1,7 @@
 <?php
 
 
- function autoload_f9ea6fb996e030c36c90929e676a4c02($class)
+ function autoload_56870b6ddc2a228acb8121909f709515($class)
 {
     $classes = array(
         'App\Asic\ExternalBnCancelTransferService' => __DIR__ .'/ExternalBnCancelTransferService.php',
@@ -355,7 +355,7 @@
     };
 }
 
-spl_autoload_register('autoload_f9ea6fb996e030c36c90929e676a4c02');
+spl_autoload_register('autoload_56870b6ddc2a228acb8121909f709515');
 
 // Do nothing. The rest is just leftovers from the code generation.
 {
