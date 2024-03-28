@@ -5,7 +5,7 @@ namespace App\Asic;
 class business
 {
 
-  /**
+    /**
      * @var date $startDate
      */
     protected $startDate = null;
@@ -17,31 +17,16 @@ class business
 
     /**
      * @var trueType $agentAppointed
-
      */
     protected $agentAppointed = null;
- 
-    /**
-     * @var nameIndexEntityType $organisation
-     */
-     protected $organisation = null;
 
     /**
-     * @var individualType $person
-     */
-    protected $person = null;
-
-    /**
-     * @param nameIndexEntityType $organisation
-     * @param individualType $person
      * @param date $startDate
      * @param date $endDate
      * @param trueType $agentAppointed
      */
-    public function __construct($organisation = null, $person = null, $startDate = null, $endDate = null, $agentAppointed = null)
+    public function __construct($startDate, $endDate, $agentAppointed)
     {
-      $this->organisation = $organisation;
-      $this->person = $person;
       $this->startDate = $startDate;
       $this->endDate = $endDate;
       $this->agentAppointed = $agentAppointed;
@@ -98,42 +83,6 @@ class business
     public function setAgentAppointed($agentAppointed)
     {
       $this->agentAppointed = $agentAppointed;
-      return $this;
-    }
-
-    /**
-     * @return nameIndexEntityType
-     */
-    public function getOrganisation()
-    {
-      return $this->organisation;
-    }
-
-    /**
-     * @param nameIndexEntityType $organisation
-     * @return \App\Asic\business
-     */
-    public function setOrganisation($organisation)
-    {
-      $this->organisation = $organisation;
-      return $this;
-    }
-
-    /**
-     * @return individualType
-     */
-    public function getPerson()
-    {
-      return $this->person;
-    }
-
-    /**
-     * @param individualType $person
-     * @return \App\Asic\business
-     */
-    public function setPerson($person)
-    {
-      $this->person = $person;
       return $this;
     }
 
