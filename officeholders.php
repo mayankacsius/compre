@@ -2,37 +2,62 @@
 
 namespace App\Asic;
 
-class officeholders
+class officeHolders
 {
 
     /**
-     * @var officeholderType $officeholder
+     * @var boolean $isOfficeholdersAddressResidential
      */
-    protected $officeholder = null;
+    protected $isOfficeholdersAddressResidential = null;
 
     /**
-     * @param officeholderType $officeholder
+     * @var OfficeHolderType $officeHolder
      */
-    public function __construct($officeholder)
+    protected $officeHolder = null;
+
+    /**
+     * @param boolean $isOfficeholdersAddressResidential
+     * @param OfficeHolderType $officeHolder
+     */
+    public function __construct($isOfficeholdersAddressResidential, $officeHolder)
     {
-      $this->officeholder = $officeholder;
+      $this->isOfficeholdersAddressResidential = $isOfficeholdersAddressResidential;
+      $this->officeHolder = $officeHolder;
     }
 
     /**
-     * @return officeholderType
+     * @return boolean
      */
-    public function getOfficeholder()
+    public function getIsOfficeholdersAddressResidential()
     {
-      return $this->officeholder;
+      return $this->isOfficeholdersAddressResidential;
     }
 
     /**
-     * @param officeholderType $officeholder
-     * @return \App\Asic\officeholders
+     * @param boolean $isOfficeholdersAddressResidential
+     * @return \App\Asic\officeHolders
      */
-    public function setOfficeholder($officeholder)
+    public function setIsOfficeholdersAddressResidential($isOfficeholdersAddressResidential)
     {
-      $this->officeholder = $officeholder;
+      $this->isOfficeholdersAddressResidential = $isOfficeholdersAddressResidential;
+      return $this;
+    }
+
+    /**
+     * @return OfficeHolderType
+     */
+    public function getOfficeHolder()
+    {
+      return $this->officeHolder;
+    }
+
+    /**
+     * @param OfficeHolderType $officeHolder
+     * @return \App\Asic\officeHolders
+     */
+    public function setOfficeHolder($officeHolder)
+    {
+      $this->officeHolder = $officeHolder;
       return $this;
     }
 

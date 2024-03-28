@@ -2,74 +2,76 @@
 
 namespace App\Asic;
 
-class officeholderType
+class OfficeHolderType extends personNameFormerNameType
 {
 
     /**
-     * @var organisationType $organisation
+     * @var birthDetailsExtType $birthDetail
      */
-    protected $organisation = null;
+    protected $birthDetail = null;
 
     /**
-     * @var individualType $individual
+     * @var address $address
      */
-    protected $individual = null;
+    protected $address = null;
 
     /**
-     * @var officeholderRole $role
+     * @var role[] $role
      */
     protected $role = null;
 
     /**
-     * @param organisationType $organisation
-     * @param individualType $individual
-     * @param officeholderRole $role
+     * @param personNameType $name
+     * @param birthDetailsExtType $birthDetail
+     * @param address $address
+     * @param role[] $role
      */
-    public function __construct($organisation, $individual, $role)
+    public function __construct($name, $birthDetail, $address, array $role)
     {
-      $this->organisation = $organisation;
-      $this->individual = $individual;
+      parent::__construct($name);
+      $this->birthDetail = $birthDetail;
+      $this->address = $address;
       $this->role = $role;
     }
 
     /**
-     * @return organisationType
+     * @return birthDetailsExtType
      */
-    public function getOrganisation()
+    public function getBirthDetail()
     {
-      return $this->organisation;
+      return $this->birthDetail;
     }
 
     /**
-     * @param organisationType $organisation
-     * @return \App\Asic\officeholderType
+     * @param birthDetailsExtType $birthDetail
+     * @return \App\Asic\OfficeHolderType
      */
-    public function setOrganisation($organisation)
+    public function setBirthDetail($birthDetail)
     {
-      $this->organisation = $organisation;
+      $this->birthDetail = $birthDetail;
       return $this;
     }
 
     /**
-     * @return individualType
+     * @return address
      */
-    public function getIndividual()
+    public function getAddress()
     {
-      return $this->individual;
+      return $this->address;
     }
 
     /**
-     * @param individualType $individual
-     * @return \App\Asic\officeholderType
+     * @param address $address
+     * @return \App\Asic\OfficeHolderType
      */
-    public function setIndividual($individual)
+    public function setAddress($address)
     {
-      $this->individual = $individual;
+      $this->address = $address;
       return $this;
     }
 
     /**
-     * @return officeholderRole
+     * @return role[]
      */
     public function getRole()
     {
@@ -77,10 +79,10 @@ class officeholderType
     }
 
     /**
-     * @param officeholderRole $role
-     * @return \App\Asic\officeholderType
+     * @param role[] $role
+     * @return \App\Asic\OfficeHolderType
      */
-    public function setRole($role)
+    public function setRole(array $role)
     {
       $this->role = $role;
       return $this;

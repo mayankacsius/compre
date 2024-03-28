@@ -1,7 +1,7 @@
 <?php
 
 
- function autoload_7764793937ce74013f9a90484053b58a($class)
+ function autoload_a219528641afdf9a63a89e2592740080($class)
 {
     $classes = array(
         'App\Asic\ExternalBnCancelTransferService' => __DIR__ .'/ExternalBnCancelTransferService.php',
@@ -12,6 +12,7 @@
         'App\Asic\ExternalQueryAddressService' => __DIR__ .'/ExternalQueryAddressService.php',
         'App\Asic\ExternalQueryNameAvailabilityServiceV2' => __DIR__ .'/ExternalQueryNameAvailabilityServiceV2.php',
         'App\Asic\ExternalSearchNniNameServiceV3' => __DIR__ .'/ExternalSearchNniNameServiceV3.php',
+        'App\Asic\ExternalCompanyLodgementService' => __DIR__ .'/ExternalCompanyLodgementService.php',
         'App\Asic\telephoneNumberType' => __DIR__ .'/telephoneNumberType.php',
         'App\Asic\telephoneNumber' => __DIR__ .'/telephoneNumber.php',
         'App\Asic\addressType' => __DIR__ .'/addressType.php',
@@ -207,18 +208,6 @@
         'App\Asic\smsType' => __DIR__ .'/smsType.php',
         'App\Asic\bnCancelTransferType' => __DIR__ .'/bnCancelTransferType.php',
         'App\Asic\bnCancelTransferReplyType' => __DIR__ .'/bnCancelTransferReplyType.php',
-        'App\Asic\base64Binary' => __DIR__ .'/base64Binary.php',
-        'App\Asic\hexBinary' => __DIR__ .'/hexBinary.php',
-        'App\Asic\businessDocumentRequestHeaderType' => __DIR__ .'/businessDocumentRequestHeaderType.php',
-        'App\Asic\businessDocumentHeaderType' => __DIR__ .'/businessDocumentHeaderType.php',
-        'App\Asic\attachmentsType' => __DIR__ .'/attachmentsType.php',
-        'App\Asic\attachmentType' => __DIR__ .'/attachmentType.php',
-        'App\Asic\softwareInformationType' => __DIR__ .'/softwareInformationType.php',
-        'App\Asic\messageEventType' => __DIR__ .'/messageEventType.php',
-        'App\Asic\messageTimestampsType' => __DIR__ .'/messageTimestampsType.php',
-        'App\Asic\messageTimestampType' => __DIR__ .'/messageTimestampType.php',
-        'App\Asic\messageEventsType' => __DIR__ .'/messageEventsType.php',
-        'App\Asic\genericResultType' => __DIR__ .'/genericResultType.php',
         'App\Asic\nniTypeType' => __DIR__ .'/nniTypeType.php',
         'App\Asic\numberHeadingType' => __DIR__ .'/numberHeadingType.php',
         'App\Asic\searchStatusType' => __DIR__ .'/searchStatusType.php',
@@ -245,6 +234,71 @@
         'App\Asic\companyExtractRequestType' => __DIR__ .'/companyExtractRequestType.php',
         'App\Asic\company' => __DIR__ .'/company.php',
         'App\Asic\document' => __DIR__ .'/document.php',
+        'App\Asic\companyTypeType' => __DIR__ .'/companyTypeType.php',
+        'App\Asic\companyClassType' => __DIR__ .'/companyClassType.php',
+        'App\Asic\companySubClassType' => __DIR__ .'/companySubClassType.php',
+        'App\Asic\legalElementsType' => __DIR__ .'/legalElementsType.php',
+        'App\Asic\CoyLodgeFormType' => __DIR__ .'/CoyLodgeFormType.php',
+        'App\Asic\applicant' => __DIR__ .'/applicant.php',
+        'App\Asic\CoyReserveFormType' => __DIR__ .'/CoyReserveFormType.php',
+        'App\Asic\lodgement' => __DIR__ .'/lodgement.php',
+        'App\Asic\applicantDetail' => __DIR__ .'/applicantDetail.php',
+        'App\Asic\contact' => __DIR__ .'/contact.php',
+        'App\Asic\paymentDetail' => __DIR__ .'/paymentDetail.php',
+        'App\Asic\EntityNameType' => __DIR__ .'/EntityNameType.php',
+        'App\Asic\organisationDetail' => __DIR__ .'/organisationDetail.php',
+        'App\Asic\ApplicantDetailType' => __DIR__ .'/ApplicantDetailType.php',
+        'App\Asic\BusinessNameDetailType' => __DIR__ .'/BusinessNameDetailType.php',
+        'App\Asic\prevBusinessIdentifier' => __DIR__ .'/prevBusinessIdentifier.php',
+        'App\Asic\OccupiedByType' => __DIR__ .'/OccupiedByType.php',
+        'App\Asic\TradingHourType' => __DIR__ .'/TradingHourType.php',
+        'App\Asic\OrganisationExtType' => __DIR__ .'/OrganisationExtType.php',
+        'App\Asic\OfficeHolderType' => __DIR__ .'/OfficeHolderType.php',
+        'App\Asic\address' => __DIR__ .'/address.php',
+        'App\Asic\ShareStructureType' => __DIR__ .'/ShareStructureType.php',
+        'App\Asic\MemberType' => __DIR__ .'/MemberType.php',
+        'App\Asic\ShareHoldingDetailsType' => __DIR__ .'/ShareHoldingDetailsType.php',
+        'App\Asic\members' => __DIR__ .'/members.php',
+        'App\Asic\RegistrationAdministrativeDetailType' => __DIR__ .'/RegistrationAdministrativeDetailType.php',
+        'App\Asic\manualReview' => __DIR__ .'/manualReview.php',
+        'App\Asic\ReservationAdministrativeDetailType' => __DIR__ .'/ReservationAdministrativeDetailType.php',
+        'App\Asic\SharesDetailType' => __DIR__ .'/SharesDetailType.php',
+        'App\Asic\shareStructure' => __DIR__ .'/shareStructure.php',
+        'App\Asic\holdings' => __DIR__ .'/holdings.php',
+        'App\Asic\RegistrationDetailsType' => __DIR__ .'/RegistrationDetailsType.php',
+        'App\Asic\proposedCompanyName' => __DIR__ .'/proposedCompanyName.php',
+        'App\Asic\ACNAsName' => __DIR__ .'/ACNAsName.php',
+        'App\Asic\reservationDetails' => __DIR__ .'/reservationDetails.php',
+        'App\Asic\addresses' => __DIR__ .'/addresses.php',
+        'App\Asic\registeredOffice' => __DIR__ .'/registeredOffice.php',
+        'App\Asic\officeOccupant' => __DIR__ .'/officeOccupant.php',
+        'App\Asic\thirdParty' => __DIR__ .'/thirdParty.php',
+        'App\Asic\officeHours' => __DIR__ .'/officeHours.php',
+        'App\Asic\ppob' => __DIR__ .'/ppob.php',
+        'App\Asic\officeHolders' => __DIR__ .'/officeHolders.php',
+        'App\Asic\ownershipStructure' => __DIR__ .'/ownershipStructure.php',
+        'App\Asic\membersGuarantee' => __DIR__ .'/membersGuarantee.php',
+        'App\Asic\ReservationDetailsType' => __DIR__ .'/ReservationDetailsType.php',
+        'App\Asic\formType' => __DIR__ .'/formType.php',
+        'App\Asic\newRegistration' => __DIR__ .'/newRegistration.php',
+        'App\Asic\modify' => __DIR__ .'/modify.php',
+        'App\Asic\UtlimateHoldingCompanyType' => __DIR__ .'/UtlimateHoldingCompanyType.php',
+        'App\Asic\CompanyRegStructureType' => __DIR__ .'/CompanyRegStructureType.php',
+        'App\Asic\CompanyReserveStructureType' => __DIR__ .'/CompanyReserveStructureType.php',
+        'App\Asic\ABRSCompanyReserveStructureType' => __DIR__ .'/ABRSCompanyReserveStructureType.php',
+        'App\Asic\addressLodgeStrictType' => __DIR__ .'/addressLodgeStrictType.php',
+        'App\Asic\base64Binary' => __DIR__ .'/base64Binary.php',
+        'App\Asic\hexBinary' => __DIR__ .'/hexBinary.php',
+        'App\Asic\businessDocumentRequestHeaderType' => __DIR__ .'/businessDocumentRequestHeaderType.php',
+        'App\Asic\businessDocumentHeaderType' => __DIR__ .'/businessDocumentHeaderType.php',
+        'App\Asic\attachmentsType' => __DIR__ .'/attachmentsType.php',
+        'App\Asic\attachmentType' => __DIR__ .'/attachmentType.php',
+        'App\Asic\softwareInformationType' => __DIR__ .'/softwareInformationType.php',
+        'App\Asic\messageEventType' => __DIR__ .'/messageEventType.php',
+        'App\Asic\messageTimestampsType' => __DIR__ .'/messageTimestampsType.php',
+        'App\Asic\messageTimestampType' => __DIR__ .'/messageTimestampType.php',
+        'App\Asic\messageEventsType' => __DIR__ .'/messageEventsType.php',
+        'App\Asic\genericResultType' => __DIR__ .'/genericResultType.php',
         'App\Asic\tTimestampFault' => __DIR__ .'/tTimestampFault.php',
         'App\Asic\AttributedDateTime' => __DIR__ .'/AttributedDateTime.php',
         'App\Asic\AttributedURI' => __DIR__ .'/AttributedURI.php',
@@ -268,13 +322,17 @@
         'App\Asic\queryNameAvailabilityReplyType' => __DIR__ .'/queryNameAvailabilityReplyType.php',
         'App\Asic\searchNniNameRequestType' => __DIR__ .'/searchNniNameRequestType.php',
         'App\Asic\searchNniNameReplyType' => __DIR__ .'/searchNniNameReplyType.php'
+        'App\Asic\CompanyLodgeRequestType' => __DIR__ .'/CompanyLodgeRequestType.php',
+        'App\Asic\CompanyLodgeReplyType' => __DIR__ .'/CompanyLodgeReplyType.php',
+        'App\Asic\CompanyLodgeReplyDataType' => __DIR__ .'/CompanyLodgeReplyDataType.php',
+        'App\Asic\accepted' => __DIR__ .'/accepted.php'
     );
     if (!empty($classes[$class])) {
         include $classes[$class];
     };
 }
 
-spl_autoload_register('autoload_7764793937ce74013f9a90484053b58a');
+spl_autoload_register('autoload_a219528641afdf9a63a89e2592740080');
 
 // Do nothing. The rest is just leftovers from the code generation.
 {
