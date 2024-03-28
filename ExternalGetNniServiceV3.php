@@ -246,6 +246,8 @@ class ExternalGetNniServiceV3 extends \SoapClient
   'password' => '$ummer20240212',
   'connection_timeout' => 600,
   'features' => 1,
+  'trace' => true,
+  'soap_version' => 2,
 ), $options);
       if (!$wsdl) {
         $wsdl = 'https://www.gateway.uat.asic.gov.au/gateway/ExternalGetNniNamePortV3?WSDL';
