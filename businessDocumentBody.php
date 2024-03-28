@@ -30,19 +30,48 @@ class businessDocumentBody
     protected $payment = null;
 
     /**
+     * @var formCode $formCode
+     */
+    protected $formCode = null;
+
+    /**
+     * @var subFormCodes $subFormCodes
+     */
+    protected $subFormCodes = null;
+
+    /**
+     * @var receivedDate $receivedDate
+     */
+    protected $receivedDate = null;
+
+    /**
+     * @var effectiveDate $effectiveDate
+     */
+    protected $effectiveDate = null;
+    
+    /**
      * @param transactionReferenceNumber $transactionReferenceNumber
      * @param asicTransactionNumber $asicTransactionNumber
      * @param applicant $applicant
      * @param lodgements $lodgements
      * @param payment $payment
+     * @param formCode $formCode
+     * @param subFormCodes $subFormCodes
+     * @param receivedDate $receivedDate
+     * @param effectiveDate $effectiveDate
      */
-    public function __construct($transactionReferenceNumber = null, $asicTransactionNumber = null, $applicant = null, $lodgements = null, $payment = null)
+    public function __construct($transactionReferenceNumber = null, $asicTransactionNumber = null, $applicant = null, $lodgements = null, $payment = null, $formCode = null, $subFormCodes = null, $receivedDate = null, $effectiveDate = null)
     {
       $this->transactionReferenceNumber = $transactionReferenceNumber;
       $this->asicTransactionNumber = $asicTransactionNumber;
       $this->applicant = $applicant;
       $this->lodgements = $lodgements;
       $this->payment = $payment;
+
+      $this->formCode = $formCode;
+      $this->subFormCodes = $subFormCodes;
+      $this->receivedDate = $receivedDate;
+      $this->effectiveDate = $effectiveDate;
     }
 
     /**
@@ -56,11 +85,15 @@ class businessDocumentBody
     /**
      * @param transactionReferenceNumber $transactionReferenceNumber
      * @return \App\Asic\businessDocumentBody
+
+
      */
     public function setTransactionReferenceNumber($transactionReferenceNumber)
     {
       $this->transactionReferenceNumber = $transactionReferenceNumber;
       return $this;
+
+
     }
 
     /**
@@ -132,6 +165,78 @@ class businessDocumentBody
     public function setPayment($payment)
     {
       $this->payment = $payment;
+      return $this;
+    }
+
+    /**
+     * @return formCode
+     */
+    public function getFormCode()
+    {
+      return $this->formCode;
+    }
+
+    /**
+     * @param formCode $formCode
+     * @return \App\Asic\businessDocumentBody
+     */
+    public function setFormCode($formCode)
+    {
+      $this->formCode = $formCode;
+      return $this;
+    }
+
+    /**
+     * @return subFormCodes
+     */
+    public function getSubFormCodes()
+    {
+      return $this->subFormCodes;
+    }
+
+    /**
+     * @param subFormCodes $subFormCodes
+     * @return \App\Asic\businessDocumentBody
+     */
+    public function setSubFormCodes($subFormCodes)
+    {
+      $this->subFormCodes = $subFormCodes;
+      return $this;
+    }
+
+    /**
+     * @return receivedDate
+     */
+    public function getReceivedDate()
+    {
+      return $this->receivedDate;
+    }
+
+    /**
+     * @param receivedDate $receivedDate
+     * @return \App\Asic\businessDocumentBody
+     */
+    public function setReceivedDate($receivedDate)
+    {
+      $this->receivedDate = $receivedDate;
+      return $this;
+    }
+
+    /**
+     * @return effectiveDate
+     */
+    public function getEffectiveDate()
+    {
+      return $this->effectiveDate;
+    }
+
+    /**
+     * @param effectiveDate $effectiveDate
+     * @return \App\Asic\businessDocumentBody
+     */
+    public function setEffectiveDate($effectiveDate)
+    {
+      $this->effectiveDate = $effectiveDate;
       return $this;
     }
 
