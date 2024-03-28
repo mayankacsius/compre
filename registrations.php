@@ -6,9 +6,9 @@ class registrations
 {
 
     /**
-     * @var companyIncorporation $companyIncorporation
+     * @var companyRegistration $companyRegistration
      */
-    protected $companyIncorporation = null;
+    protected $companyRegistration = null;
 
     /**
      * @var businessRegistration $businessRegistration
@@ -16,30 +16,30 @@ class registrations
     protected $businessRegistration = null;
 
     /**
-     * @param companyIncorporation $companyIncorporation
+     * @param companyRegistration $companyRegistration
      * @param businessRegistration $businessRegistration
      */
-    public function __construct($companyIncorporation, $businessRegistration)
+    public function __construct($companyRegistration, $businessRegistration)
     {
-      $this->companyIncorporation = $companyIncorporation;
+      $this->companyRegistration = $companyRegistration;
       $this->businessRegistration = $businessRegistration;
     }
 
     /**
-     * @return companyIncorporation
+     * @return companyRegistration
      */
-    public function getCompanyIncorporation()
+    public function getCompanyRegistration()
     {
-      return $this->companyIncorporation;
+      return $this->companyRegistration;
     }
 
     /**
-     * @param companyIncorporation $companyIncorporation
+     * @param companyRegistration $companyRegistration
      * @return \App\Asic\registrations
      */
-    public function setCompanyIncorporation($companyIncorporation)
+    public function setCompanyRegistration($companyRegistration)
     {
-      $this->companyIncorporation = $companyIncorporation;
+      $this->companyRegistration = $companyRegistration;
       return $this;
     }
 

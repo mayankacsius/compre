@@ -4,7 +4,6 @@ namespace App\Asic;
 
 class reservationExtension
 {
-
     /**
      * @var nniNameType $reservedName
      */
@@ -22,21 +21,45 @@ class reservationExtension
 
     /**
      * @var asicTransactionNumber $asicTransactionNumber
+
+
      */
     protected $asicTransactionNumber = null;
+
+    /**
+     * @var nniNameType $proposedCompanyName
+     */
+    protected $proposedCompanyName = null;
+
+    /**
+     * @var documentNoType $reservationDocumentNumber
+     */
+    protected $reservationDocumentNumber = null;
+
+    /**
+     * @var amountType $calculatedFee
+     */
+    protected $calculatedFee = null;
 
     /**
      * @param nniNameType $reservedName
      * @param feeType $fees
      * @param lodgementStatus $lodgementStatus
      * @param asicTransactionNumber $asicTransactionNumber
+     * @param nniNameType $proposedCompanyName
+     * @param documentNoType $reservationDocumentNumber
+     * @param amountType $calculatedFee
      */
-    public function __construct($reservedName, $fees, $lodgementStatus, $asicTransactionNumber)
+    public function __construct($reservedName = null, $fees = null, $lodgementStatus = null, $asicTransactionNumber = null, $proposedCompanyName = null, $reservationDocumentNumber = null, $calculatedFee = null)
     {
       $this->reservedName = $reservedName;
       $this->fees = $fees;
       $this->lodgementStatus = $lodgementStatus;
       $this->asicTransactionNumber = $asicTransactionNumber;
+
+      $this->proposedCompanyName = $proposedCompanyName;
+      $this->reservationDocumentNumber = $reservationDocumentNumber;
+      $this->calculatedFee = $calculatedFee;
     }
 
     /**
@@ -108,6 +131,60 @@ class reservationExtension
     public function setAsicTransactionNumber($asicTransactionNumber)
     {
       $this->asicTransactionNumber = $asicTransactionNumber;
+      return $this;
+    }
+
+    /**
+     * @return nniNameType
+     */
+    public function getProposedCompanyName()
+    {
+      return $this->proposedCompanyName;
+    }
+
+    /**
+     * @param nniNameType $proposedCompanyName
+     * @return \App\Asic\reservationExtension
+     */
+    public function setProposedCompanyName($proposedCompanyName)
+    {
+      $this->proposedCompanyName = $proposedCompanyName;
+      return $this;
+    }
+
+    /**
+     * @return documentNoType
+     */
+    public function getReservationDocumentNumber()
+    {
+      return $this->reservationDocumentNumber;
+    }
+
+    /**
+     * @param documentNoType $reservationDocumentNumber
+     * @return \App\Asic\reservationExtension
+     */
+    public function setReservationDocumentNumber($reservationDocumentNumber)
+    {
+      $this->reservationDocumentNumber = $reservationDocumentNumber;
+      return $this;
+    }
+
+    /**
+     * @return amountType
+     */
+    public function getCalculatedFee()
+    {
+      return $this->calculatedFee;
+    }
+
+    /**
+     * @param amountType $calculatedFee
+     * @return \App\Asic\reservationExtension
+     */
+    public function setCalculatedFee($calculatedFee)
+    {
+      $this->calculatedFee = $calculatedFee;
       return $this;
     }
 

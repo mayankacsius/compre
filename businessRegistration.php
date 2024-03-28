@@ -22,6 +22,8 @@ class businessRegistration
 
     /**
      * @var statusReason $statusReason
+
+
      */
     protected $statusReason = null;
 
@@ -36,14 +38,32 @@ class businessRegistration
     protected $certificateURL = null;
 
     /**
+     * @var businessNameDetails $businessNameDetails
+     */
+    protected $businessNameDetails = null;
+
+    /**
+     * @var proprietor $proprietor
+     */
+    protected $proprietor = null;
+
+    /**
+     * @var amountType $calculatedFee
+     */
+    protected $calculatedFee = null;
+
+    /**
      * @param nniNameType $businessName
      * @param feeType $fees
      * @param lodgementStatus $lodgementStatus
      * @param statusReason $statusReason
      * @param asicTransactionNumber $asicTransactionNumber
      * @param certificateURL $certificateURL
+     * @param businessNameDetails $businessNameDetails
+     * @param proprietor $proprietor
+     * @param amountType $calculatedFee
      */
-    public function __construct($businessName, $fees, $lodgementStatus, $statusReason, $asicTransactionNumber, $certificateURL)
+    public function __construct($businessName = null, $fees = null, $lodgementStatus = null, $statusReason = null, $asicTransactionNumber = null, $certificateURL = null, $businessNameDetails = null, $proprietor = null, $calculatedFee = null)
     {
       $this->businessName = $businessName;
       $this->fees = $fees;
@@ -51,6 +71,10 @@ class businessRegistration
       $this->statusReason = $statusReason;
       $this->asicTransactionNumber = $asicTransactionNumber;
       $this->certificateURL = $certificateURL;
+
+      $this->businessNameDetails = $businessNameDetails;
+      $this->proprietor = $proprietor;
+      $this->calculatedFee = $calculatedFee;
     }
 
     /**
@@ -158,6 +182,60 @@ class businessRegistration
     public function setCertificateURL($certificateURL)
     {
       $this->certificateURL = $certificateURL;
+      return $this;
+    }
+
+    /**
+     * @return businessNameDetails
+     */
+    public function getBusinessNameDetails()
+    {
+      return $this->businessNameDetails;
+    }
+
+    /**
+     * @param businessNameDetails $businessNameDetails
+     * @return \App\Asic\businessRegistration
+     */
+    public function setBusinessNameDetails($businessNameDetails)
+    {
+      $this->businessNameDetails = $businessNameDetails;
+      return $this;
+    }
+
+    /**
+     * @return proprietor
+     */
+    public function getProprietor()
+    {
+      return $this->proprietor;
+    }
+
+    /**
+     * @param proprietor $proprietor
+     * @return \App\Asic\businessRegistration
+     */
+    public function setProprietor($proprietor)
+    {
+      $this->proprietor = $proprietor;
+      return $this;
+    }
+
+    /**
+     * @return amountType
+     */
+    public function getCalculatedFee()
+    {
+      return $this->calculatedFee;
+    }
+
+    /**
+     * @param amountType $calculatedFee
+     * @return \App\Asic\businessRegistration
+     */
+    public function setCalculatedFee($calculatedFee)
+    {
+      $this->calculatedFee = $calculatedFee;
       return $this;
     }
 

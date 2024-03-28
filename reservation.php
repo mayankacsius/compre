@@ -4,7 +4,6 @@ namespace App\Asic;
 
 class reservation
 {
-
     /**
      * @var nniNameType $reservedName
      */
@@ -31,19 +30,48 @@ class reservation
     protected $asicTransactionNumber = null;
 
     /**
+     * @var companyDetails $companyDetails
+     */
+    protected $companyDetails = null;
+
+    /**
+     * @var BusinessNameDetailType $identicalBusinessNamesOwned
+     */
+    protected $identicalBusinessNamesOwned = null;
+
+    /**
+     * @var trueType $willRequestManualDetermination
+     */
+    protected $willRequestManualDetermination = null;
+
+    /**
+     * @var amountType $calculatedFee
+     */
+    protected $calculatedFee = null;
+
+    /**
      * @param nniNameType $reservedName
      * @param feeType $fees
      * @param lodgementStatus $lodgementStatus
      * @param statusReason $statusReason
      * @param asicTransactionNumber $asicTransactionNumber
+     * @param companyDetails $companyDetails
+     * @param BusinessNameDetailType $identicalBusinessNamesOwned
+     * @param trueType $willRequestManualDetermination
+     * @param amountType $calculatedFee
      */
-    public function __construct($reservedName, $fees, $lodgementStatus, $statusReason, $asicTransactionNumber)
+    public function __construct($reservedName = null, $fees = null, $lodgementStatus = null, $statusReason = null, $asicTransactionNumber = null, $companyDetails = null, $identicalBusinessNamesOwned = null, $willRequestManualDetermination = null, $calculatedFee = null)
     {
       $this->reservedName = $reservedName;
       $this->fees = $fees;
       $this->lodgementStatus = $lodgementStatus;
       $this->statusReason = $statusReason;
       $this->asicTransactionNumber = $asicTransactionNumber;
+
+      $this->companyDetails = $companyDetails;
+      $this->identicalBusinessNamesOwned = $identicalBusinessNamesOwned;
+      $this->willRequestManualDetermination = $willRequestManualDetermination;
+      $this->calculatedFee = $calculatedFee;
     }
 
     /**
@@ -133,6 +161,78 @@ class reservation
     public function setAsicTransactionNumber($asicTransactionNumber)
     {
       $this->asicTransactionNumber = $asicTransactionNumber;
+      return $this;
+    }
+
+    /**
+     * @return companyDetails
+     */
+    public function getCompanyDetails()
+    {
+      return $this->companyDetails;
+    }
+
+    /**
+     * @param companyDetails $companyDetails
+     * @return \App\Asic\reservation
+     */
+    public function setCompanyDetails($companyDetails)
+    {
+      $this->companyDetails = $companyDetails;
+      return $this;
+    }
+
+    /**
+     * @return BusinessNameDetailType
+     */
+    public function getIdenticalBusinessNamesOwned()
+    {
+      return $this->identicalBusinessNamesOwned;
+    }
+
+    /**
+     * @param BusinessNameDetailType $identicalBusinessNamesOwned
+     * @return \App\Asic\reservation
+     */
+    public function setIdenticalBusinessNamesOwned($identicalBusinessNamesOwned)
+    {
+      $this->identicalBusinessNamesOwned = $identicalBusinessNamesOwned;
+      return $this;
+    }
+
+    /**
+     * @return trueType
+     */
+    public function getWillRequestManualDetermination()
+    {
+      return $this->willRequestManualDetermination;
+    }
+
+    /**
+     * @param trueType $willRequestManualDetermination
+     * @return \App\Asic\reservation
+     */
+    public function setWillRequestManualDetermination($willRequestManualDetermination)
+    {
+      $this->willRequestManualDetermination = $willRequestManualDetermination;
+      return $this;
+    }
+
+    /**
+     * @return amountType
+     */
+    public function getCalculatedFee()
+    {
+      return $this->calculatedFee;
+    }
+
+    /**
+     * @param amountType $calculatedFee
+     * @return \App\Asic\reservation
+     */
+    public function setCalculatedFee($calculatedFee)
+    {
+      $this->calculatedFee = $calculatedFee;
       return $this;
     }
 
