@@ -1,7 +1,7 @@
 <?php
 
 
- function autoload_56870b6ddc2a228acb8121909f709515($class)
+ function autoload_6645eb4ec94e9a2ab26ae6e478613aa9($class)
 {
     $classes = array(
         'App\Asic\ExternalBnCancelTransferService' => __DIR__ .'/ExternalBnCancelTransferService.php',
@@ -16,6 +16,7 @@
         'App\Asic\ExternalBz1ServiceV2' => __DIR__ .'/ExternalBz1ServiceV2.php',
         'App\Asic\ExternalGetTransactionStatusService' => __DIR__ .'/ExternalGetTransactionStatusService.php',
         'App\Asic\ExternalInitiatePaymentService' => __DIR__ .'/ExternalInitiatePaymentService.php',
+        'App\Asic\ExternalSimpleFeeLookupService' => __DIR__ .'/ExternalSimpleFeeLookupService.php',
         'App\Asic\telephoneNumberType' => __DIR__ .'/telephoneNumberType.php',
         'App\Asic\telephoneNumber' => __DIR__ .'/telephoneNumber.php',
         'App\Asic\addressType' => __DIR__ .'/addressType.php',
@@ -348,14 +349,20 @@
         'App\Asic\feePayment' => __DIR__ .'/feePayment.php',
         'App\Asic\payment' => __DIR__ .'/payment.php',
         'App\Asic\initiatePaymentReplyType' => __DIR__ .'/initiatePaymentReplyType.php',
-        'App\Asic\initiatePaymentReplyDataType' => __DIR__ .'/initiatePaymentReplyDataType.php'
+        'App\Asic\initiatePaymentReplyDataType' => __DIR__ .'/initiatePaymentReplyDataType.php',
+        'App\Asic\businessDocumentBody' => __DIR__ .'/businessDocumentBody.php',
+        'App\Asic\simpleFeeLookupRequestType' => __DIR__ .'/simpleFeeLookupRequestType.php',
+        'App\Asic\subFormCodes' => __DIR__ .'/subFormCodes.php',
+        'App\Asic\simpleFeeLookupReplyType' => __DIR__ .'/simpleFeeLookupReplyType.php',
+        'App\Asic\dissections' => __DIR__ .'/dissections.php',
+        'App\Asic\dissection' => __DIR__ .'/dissection.php'
     );
     if (!empty($classes[$class])) {
         include $classes[$class];
     };
 }
 
-spl_autoload_register('autoload_56870b6ddc2a228acb8121909f709515');
+spl_autoload_register('autoload_6645eb4ec94e9a2ab26ae6e478613aa9');
 
 // Do nothing. The rest is just leftovers from the code generation.
 {
