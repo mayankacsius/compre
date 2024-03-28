@@ -41,7 +41,7 @@ class documentType
      * @param codeType $formCode
      * @param descriptionType $description
      */
-    public function __construct($documentNumber = null, $dateReceived = null, $formCode = null, $description = null)
+    public function __construct($documentNumber, $dateReceived, $formCode, $description)
     {
       $this->documentNumber = $documentNumber;
       $this->dateReceived = $dateReceived;

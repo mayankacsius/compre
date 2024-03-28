@@ -1,7 +1,7 @@
 <?php
 
 
- function autoload_a219528641afdf9a63a89e2592740080($class)
+ function autoload_2a5653a462c6ee01210050034913a487($class)
 {
     $classes = array(
         'App\Asic\ExternalBnCancelTransferService' => __DIR__ .'/ExternalBnCancelTransferService.php',
@@ -13,6 +13,7 @@
         'App\Asic\ExternalQueryNameAvailabilityServiceV2' => __DIR__ .'/ExternalQueryNameAvailabilityServiceV2.php',
         'App\Asic\ExternalSearchNniNameServiceV3' => __DIR__ .'/ExternalSearchNniNameServiceV3.php',
         'App\Asic\ExternalCompanyLodgementService' => __DIR__ .'/ExternalCompanyLodgementService.php',
+        'App\Asic\ExternalBz1ServiceV2' => __DIR__ .'/ExternalBz1ServiceV2.php',
         'App\Asic\telephoneNumberType' => __DIR__ .'/telephoneNumberType.php',
         'App\Asic\telephoneNumber' => __DIR__ .'/telephoneNumber.php',
         'App\Asic\addressType' => __DIR__ .'/addressType.php',
@@ -321,7 +322,7 @@
         'App\Asic\queryNameAvailabilityRequestType' => __DIR__ .'/queryNameAvailabilityRequestType.php',
         'App\Asic\queryNameAvailabilityReplyType' => __DIR__ .'/queryNameAvailabilityReplyType.php',
         'App\Asic\searchNniNameRequestType' => __DIR__ .'/searchNniNameRequestType.php',
-        'App\Asic\searchNniNameReplyType' => __DIR__ .'/searchNniNameReplyType.php'
+        'App\Asic\searchNniNameReplyType' => __DIR__ .'/searchNniNameReplyType.php',
         'App\Asic\CompanyLodgeRequestType' => __DIR__ .'/CompanyLodgeRequestType.php',
         'App\Asic\CompanyLodgeReplyType' => __DIR__ .'/CompanyLodgeReplyType.php',
         'App\Asic\CompanyLodgeReplyDataType' => __DIR__ .'/CompanyLodgeReplyDataType.php',
@@ -332,7 +333,7 @@
     };
 }
 
-spl_autoload_register('autoload_a219528641afdf9a63a89e2592740080');
+spl_autoload_register('autoload_2a5653a462c6ee01210050034913a487');
 
 // Do nothing. The rest is just leftovers from the code generation.
 {
